@@ -1,6 +1,8 @@
 package com.pokesearch.data.remote.model
 
 import com.google.gson.annotations.SerializedName
+import com.pokesearch.data.model.Pokemon
+import com.pokesearch.data.model.PokemonType
 
 data class RemotePokemon(
     @SerializedName("id") val id: Int,
@@ -10,3 +12,13 @@ data class RemotePokemon(
     @SerializedName("types") val types: List<RemoteOrderedPokemonType>,
     @SerializedName("sprites") val sprites: RemotePokemonSprites,
 )
+
+fun RemotePokemon.toExternal() =
+    Pokemon(
+        id = id,
+        name = name,
+        heightDecimeters = heightDecimeters,
+        weightHectoGrams = weightHectoGrams,
+        types = types.toExternal(),
+        imageUrl = sprites.frontDefaultUrl
+    )

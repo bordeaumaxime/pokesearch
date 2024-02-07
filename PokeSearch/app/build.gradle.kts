@@ -94,6 +94,9 @@ dependencies {
     val assertJVersion = "3.24.2"
     testImplementation("org.assertj:assertj-core:$assertJVersion")
 
+    // Mockito
+    testImplementation("org.mockito.kotlin:mockito-kotlin:5.2.1")
+
     // Coroutine tests
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
 
