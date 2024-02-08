@@ -17,7 +17,7 @@ import javax.inject.Inject
 @HiltViewModel
 class SearchViewModel @Inject constructor(
     private val pokemonRepository: PokemonRepository,
-    coroutineDispatcher: CoroutineDispatcher
+    defaultDispatcher: CoroutineDispatcher
 ) : ViewModel() {
 
     private val _uiState: MutableStateFlow<SearchUiState> =
@@ -32,7 +32,7 @@ class SearchViewModel @Inject constructor(
     private val searchQueryState = MutableStateFlow("")
 
     init {
-        viewModelScope.launch(coroutineDispatcher) {
+        viewModelScope.launch(defaultDispatcher) {
             searchQueryState.onEach {
                 _uiState.update {
                     it.copy(dataUiState = DataUiState.Loading)

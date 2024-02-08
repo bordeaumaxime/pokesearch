@@ -12,5 +12,5 @@ import kotlinx.coroutines.Dispatchers
 class ViewModelModule {
 
     @Provides
-    fun provideCoroutineDispatcher(): CoroutineDispatcher = Dispatchers.Main
+    fun provideDefaultDispatcher(): CoroutineDispatcher = Dispatchers.Default
 }
