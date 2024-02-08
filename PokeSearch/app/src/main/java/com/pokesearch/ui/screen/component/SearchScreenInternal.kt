@@ -7,6 +7,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.intl.Locale
+import androidx.compose.ui.text.toLowerCase
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
@@ -25,7 +27,7 @@ fun SearchScreenInternal(
     Column(modifier = modifier) {
         SearchTextField(
             search = uiState.query,
-            onSearchChanged = onQueryChange,
+            onSearchChanged = {onQueryChange(it.toLowerCase(Locale.current))},
             onClearButtonClick = { onQueryChange("") },
             modifier = Modifier.fillMaxWidth()
         )
@@ -74,7 +76,8 @@ class SearchUiStateParameterProvider : PreviewParameterProvider<SearchUiState> {
                         PokemonType("grass"),
                         PokemonType("poison")
                     ),
-                    imageUrl = "randomUrl/1.png"
+                    imageUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+                    imageGifUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/1.gif"
                 )
             )
         ),

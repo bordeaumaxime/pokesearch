@@ -43,7 +43,14 @@ class PokemonRepositoryTest {
                             RemotePokemonType(name = "grass")
                         )
                     ),
-                    sprites = RemotePokemonSprites(frontDefaultUrl = "randomUrl/1.png")
+                    sprites = RemotePokemonSprites(
+                        frontDefaultUrl = "randomUrl/1.png",
+                        other = RemotePokemonSprites.Other(
+                            showdown = RemotePokemonSprites.Other.Showdown(
+                                frontDefaultUrl = "randomUrl/1.gif"
+                            )
+                        )
+                    )
                 )
             )
         )
@@ -61,7 +68,8 @@ class PokemonRepositoryTest {
                         PokemonType("grass"),
                         PokemonType("poison")
                     ),
-                    imageUrl = "randomUrl/1.png"
+                    imageUrl = "randomUrl/1.png",
+                    imageGifUrl = "randomUrl/1.gif"
                 )
             )
         )

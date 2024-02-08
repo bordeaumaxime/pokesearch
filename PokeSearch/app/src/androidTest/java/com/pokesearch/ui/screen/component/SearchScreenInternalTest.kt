@@ -60,7 +60,8 @@ class SearchScreenInternalTest {
                             PokemonType("grass"),
                             PokemonType("poison")
                         ),
-                        imageUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+                        imageUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+                        imageGifUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/1.gif"
                     )
                 )
             )
@@ -109,6 +110,22 @@ class SearchScreenInternalTest {
             .performClick()
         // check the callback is called with empty text
         verify(onQueryChange).invoke("")
+    }
+
+    @Test
+    fun testSearchFieldConvertQueryToUppercase() {
+        setContent(
+            SearchUiState(
+                query = "bulbasaur",
+                dataUiState = DataUiState.Empty
+            )
+        )
+
+        // type text in search field
+        composeTestRule.onNodeWithText("bulbasaur")
+            .performTextReplacement("PiKachu")
+        // check the callback is called with the new text
+        verify(onQueryChange).invoke("pikachu")
     }
 
     private fun setContent(uiState: SearchUiState) {

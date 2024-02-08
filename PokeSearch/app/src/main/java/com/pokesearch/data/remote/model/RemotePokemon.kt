@@ -20,5 +20,6 @@ fun RemotePokemon.toExternal() =
         heightDecimeters = heightDecimeters,
         weightHectoGrams = weightHectoGrams,
         types = types.toExternal(),
-        imageUrl = sprites.frontDefaultUrl
+        imageUrl = sprites.frontDefaultUrl,
+        imageGifUrl = sprites.other.showdown.frontDefaultUrl
     )

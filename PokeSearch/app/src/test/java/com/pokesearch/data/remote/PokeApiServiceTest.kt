@@ -53,7 +53,12 @@ class PokeApiServiceTest {
                     "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
                     "front_female": null,
                     "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1.png",
-                    "front_shiny_female": null
+                    "front_shiny_female": null,
+                    "other": {
+                        "showdown" : {
+                            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/132.gif"
+                        }
+                    }
                   },
                   "types": [
                     {
@@ -99,7 +104,13 @@ class PokeApiServiceTest {
                         RemotePokemonType(name = "poison")
                     )
                 ),
-                sprites = RemotePokemonSprites(frontDefaultUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png")
+                sprites = RemotePokemonSprites(frontDefaultUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+                    other = RemotePokemonSprites.Other(
+                        showdown = RemotePokemonSprites.Other.Showdown(
+                            frontDefaultUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/132.gif"
+                        )
+                    )
+                )
             )
         )
         assertThat(response.code()).isEqualTo(HttpURLConnection.HTTP_OK)

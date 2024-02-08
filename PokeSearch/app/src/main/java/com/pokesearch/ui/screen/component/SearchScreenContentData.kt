@@ -47,15 +47,16 @@ fun SearchScreenContentData(
                 .fillMaxWidth()
                 .wrapContentHeight()
         ) {
+            Text(
+                text = pokemon.name.capitalize(Locale.current),
+                style = MaterialTheme.typography.headlineMedium,
+                modifier = Modifier.weight(1f)
+            )
+            Spacer(modifier = Modifier.width(16.dp))
             SearchImage(
                 pokemon = uiState.data,
                 Modifier
                     .requiredSize(96.dp)
-            )
-            Spacer(modifier = Modifier.width(16.dp))
-            Text(
-                text = pokemon.name.capitalize(Locale.current),
-                style = MaterialTheme.typography.headlineMedium
             )
         }
         Spacer(modifier = Modifier.height(16.dp))
@@ -119,7 +120,8 @@ private fun SearchScreenContentDataPreview() {
                             PokemonType("grass"),
                             PokemonType("poison")
                         ),
-                        imageUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+                        imageUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+                        imageGifUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/1.gif"
                     )
                 ),
                 modifier = Modifier

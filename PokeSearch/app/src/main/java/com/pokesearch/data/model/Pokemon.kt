@@ -7,4 +7,5 @@ data class Pokemon(
     val weightHectoGrams: Float,
     val types: List<PokemonType>,
     val imageUrl: String,
+    val imageGifUrl: String,
 )

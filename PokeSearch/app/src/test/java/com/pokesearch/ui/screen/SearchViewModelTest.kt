@@ -32,7 +32,8 @@ class SearchViewModelTest {
         types = listOf(
             PokemonType("electric")
         ),
-        imageUrl = "ww.pokemon.image"
+        imageUrl = "ww.pokemon.image",
+        imageGifUrl = "ww.pokemon.gif"
     )
 
     @Test
