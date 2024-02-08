@@ -80,6 +80,9 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
     implementation("com.squareup.retrofit2:converter-gson:$retrofitVersion")
 
+    // Coil
+    implementation("io.coil-kt:coil-compose:2.5.0")
+
     // Tests
 
     // JUnit
@@ -95,7 +98,10 @@ dependencies {
     testImplementation("org.assertj:assertj-core:$assertJVersion")
 
     // Mockito
-    testImplementation("org.mockito.kotlin:mockito-kotlin:5.2.1")
+    val mockitoKotlinVersion = "5.2.1"
+    testImplementation("org.mockito.kotlin:mockito-kotlin:$mockitoKotlinVersion")
+    androidTestImplementation("org.mockito.kotlin:mockito-kotlin:$mockitoKotlinVersion")
+    androidTestImplementation("org.mockito:mockito-android:5.8.0")
 
     // Coroutine tests
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")

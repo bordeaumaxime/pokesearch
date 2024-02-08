@@ -5,9 +5,10 @@
     <string name="search_error_unknown">An unknown error occurred.</string>
     <string name="search_content_empty">Type the Pokemon name or number to find it !</string>
     <string name="height_m">Height: %1$.2f m</string>
-    <string name="weight_kg">Weight: %1$.2f kgs</string>
+    <string name="weight_kg">Weight: %1$.2f kg</string>
     <string name="pokemon_types">Types:</string>
     <string name="clear_search">Clear Search</string>
     <string name="search_pokemon">Search Pokemon</string>
     <string name="search_field_placeholder">Type Pokemon name or number</string>
+    <string name="pokemon_image">"Image for %1$s"</string>
 </resources>
