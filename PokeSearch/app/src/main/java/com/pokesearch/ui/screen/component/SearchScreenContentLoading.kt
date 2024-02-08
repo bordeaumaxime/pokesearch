@@ -9,6 +9,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.unit.dp
 import com.pokesearch.ui.theme.PokeSearchTheme
@@ -21,11 +22,14 @@ fun SearchScreenContentLoading(modifier: Modifier) {
     ) {
         CircularProgressIndicator(
             modifier = Modifier
+                .testTag(LOADING_INDICATOR)
                 .width(64.dp),
             color = MaterialTheme.colorScheme.primary,
         )
     }
 }
+
+const val LOADING_INDICATOR = "LOADING_INDICATOR"
 
 @PreviewLightDark
 @Composable
