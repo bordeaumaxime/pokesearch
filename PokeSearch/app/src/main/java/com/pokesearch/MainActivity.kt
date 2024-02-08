@@ -7,7 +7,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import com.pokesearch.ui.screen.component.SearchScreenContent
+import com.pokesearch.ui.screen.SearchScreen
+import com.pokesearch.ui.screen.component.SearchScreenInternal
 import com.pokesearch.ui.theme.PokeSearchTheme
 
 class MainActivity : ComponentActivity() {
@@ -19,7 +20,8 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    SearchScreenContent(modifier = Modifier.fillMaxSize())
+                    SearchScreen(
+                        modifier = Modifier.fillMaxSize())
                 }
             }
         }
