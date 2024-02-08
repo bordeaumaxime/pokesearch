@@ -27,7 +27,7 @@ fun SearchScreenInternal(
     Column(modifier = modifier) {
         SearchTextField(
             search = uiState.query,
-            onSearchChanged = {onQueryChange(it.toLowerCase(Locale.current))},
+            onSearchChanged = onQueryChange,
             onClearButtonClick = { onQueryChange("") },
             modifier = Modifier.fillMaxWidth()
         )

@@ -51,6 +51,10 @@ class SearchViewModel @Inject constructor(
         }
     }
 
+    /**
+     * Searches a Pokemon.
+     * The query can be either the Pokemon number or its name in lowercase.
+     */
     fun search(query: String) {
         _uiState.update { it.copy(query = query) }
         searchQueryState.value = query

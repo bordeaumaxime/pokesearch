@@ -112,22 +112,6 @@ class SearchScreenInternalTest {
         verify(onQueryChange).invoke("")
     }
 
-    @Test
-    fun testSearchFieldConvertQueryToUppercase() {
-        setContent(
-            SearchUiState(
-                query = "bulbasaur",
-                dataUiState = DataUiState.Empty
-            )
-        )
-
-        // type text in search field
-        composeTestRule.onNodeWithText("bulbasaur")
-            .performTextReplacement("PiKachu")
-        // check the callback is called with the new text
-        verify(onQueryChange).invoke("pikachu")
-    }
-
     private fun setContent(uiState: SearchUiState) {
         composeTestRule.setContent {
             SearchScreenInternal(
