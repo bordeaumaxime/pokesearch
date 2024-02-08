@@ -4,6 +4,9 @@ import com.pokesearch.data.PokemonRepository
 import com.pokesearch.data.commons.DataResult
 import com.pokesearch.data.model.Pokemon
 import com.pokesearch.data.model.PokemonType
+import com.pokesearch.ui.screen.search.DataUiState
+import com.pokesearch.ui.screen.search.SearchUiState
+import com.pokesearch.ui.screen.search.SearchViewModel
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.toList
 import kotlinx.coroutines.launch

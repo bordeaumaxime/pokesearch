@@ -1,4 +1,4 @@
-package com.pokesearch.ui.screen
+package com.pokesearch.ui.screen.search
 
 import com.pokesearch.data.model.Pokemon
 

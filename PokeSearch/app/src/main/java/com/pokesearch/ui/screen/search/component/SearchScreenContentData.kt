@@ -1,4 +1,4 @@
-package com.pokesearch.ui.screen.component
+package com.pokesearch.ui.screen.search.component
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -30,7 +30,7 @@ import androidx.compose.ui.unit.dp
 import com.pokesearch.R
 import com.pokesearch.data.model.Pokemon
 import com.pokesearch.data.model.PokemonType
-import com.pokesearch.ui.screen.DataUiState
+import com.pokesearch.ui.screen.search.DataUiState
 import com.pokesearch.ui.theme.PokeSearchTheme
 
 @OptIn(ExperimentalLayoutApi::class)

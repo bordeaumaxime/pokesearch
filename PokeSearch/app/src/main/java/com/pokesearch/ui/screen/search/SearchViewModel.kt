@@ -1,4 +1,4 @@
-package com.pokesearch.ui.screen
+package com.pokesearch.ui.screen.search
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

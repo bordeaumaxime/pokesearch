@@ -1,4 +1,4 @@
-package com.pokesearch.ui.screen.component
+package com.pokesearch.ui.screen.search.component
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.height

@@ -1,13 +1,10 @@
-package com.pokesearch.ui.screen
+package com.pokesearch.ui.screen.search
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.capitalize
-import androidx.compose.ui.text.intl.Locale
-import androidx.compose.ui.text.toLowerCase
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.pokesearch.ui.screen.component.SearchScreenInternal
+import com.pokesearch.ui.screen.search.component.SearchScreenInternal
 
 @Composable
 fun SearchScreen(viewModel: SearchViewModel, modifier: Modifier = Modifier) {

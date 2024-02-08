@@ -8,8 +8,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import com.pokesearch.ui.screen.SearchScreen
-import com.pokesearch.ui.screen.SearchViewModel
+import com.pokesearch.ui.screen.search.SearchScreen
+import com.pokesearch.ui.screen.search.SearchViewModel
 import com.pokesearch.ui.theme.PokeSearchTheme
 import dagger.hilt.android.AndroidEntryPoint
 

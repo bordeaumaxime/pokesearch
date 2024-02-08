@@ -1,4 +1,4 @@
-package com.pokesearch.ui.screen.component
+package com.pokesearch.ui.screen.search.component
 
 import androidx.compose.ui.test.SemanticsNodeInteraction
 import androidx.compose.ui.test.assertIsDisplayed
@@ -11,8 +11,10 @@ import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performTextReplacement
 import com.pokesearch.data.model.Pokemon
 import com.pokesearch.data.model.PokemonType
-import com.pokesearch.ui.screen.DataUiState
-import com.pokesearch.ui.screen.SearchUiState
+import com.pokesearch.ui.screen.search.DataUiState
+import com.pokesearch.ui.screen.search.SearchUiState
+import com.pokesearch.ui.screen.search.component.LOADING_INDICATOR
+import com.pokesearch.ui.screen.search.component.SearchScreenInternal
 import org.junit.Rule
 import org.junit.Test
 import org.mockito.kotlin.mock

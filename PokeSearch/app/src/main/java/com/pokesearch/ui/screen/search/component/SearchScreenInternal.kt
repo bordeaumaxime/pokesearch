@@ -1,4 +1,4 @@
-package com.pokesearch.ui.screen.component
+package com.pokesearch.ui.screen.search.component
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.foundation.layout.Column
@@ -7,15 +7,13 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.intl.Locale
-import androidx.compose.ui.text.toLowerCase
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 import com.pokesearch.data.model.Pokemon
 import com.pokesearch.data.model.PokemonType
-import com.pokesearch.ui.screen.DataUiState
-import com.pokesearch.ui.screen.SearchUiState
+import com.pokesearch.ui.screen.search.DataUiState
+import com.pokesearch.ui.screen.search.SearchUiState
 import com.pokesearch.ui.theme.PokeSearchTheme
 
 @Composable
