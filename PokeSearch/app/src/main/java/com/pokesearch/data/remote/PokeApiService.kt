@@ -11,6 +11,10 @@ import retrofit2.http.Path
  */
 interface PokeApiService {
 
+    companion object {
+        const val BASE_URL = "https://pokeapi.co/api/v2/"
+    }
+
     @GET("pokemon/{idOrName}")
     suspend fun getPokemon(@Path("idOrName") idOrName: String): Response<RemotePokemon>
 }
