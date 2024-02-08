@@ -16,7 +16,7 @@ android {
         versionCode = 1
         versionName = "1.0"
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "com.pokesearch.HiltAndroidTestRunner"
         vectorDrawables {
             useSupportLibrary = true
         }
@@ -83,6 +83,9 @@ dependencies {
     implementation("com.google.dagger:hilt-android:$hiltVersion")
     ksp("com.google.dagger:hilt-android-compiler:$hiltVersion")
 
+    androidTestImplementation("com.google.dagger:hilt-android-testing:$hiltVersion")
+    kspAndroidTest("com.google.dagger:hilt-android-compiler:$hiltVersion")
+
     // Retrofit
     val retrofitVersion = "2.9.0"
     implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
@@ -120,7 +123,8 @@ dependencies {
     testImplementation("org.robolectric:robolectric:4.11.1")
 
     // Okhttp MockWebServer
-    testImplementation("com.squareup.okhttp3:mockwebserver:4.12.0")
+    val mockWebServerVersion = "4.12.0"
+    testImplementation("com.squareup.okhttp3:mockwebserver:$mockWebServerVersion")
 
     // Espresso
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")

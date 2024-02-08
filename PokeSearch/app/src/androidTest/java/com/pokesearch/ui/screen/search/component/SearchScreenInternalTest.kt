@@ -1,29 +1,28 @@
 package com.pokesearch.ui.screen.search.component
 
-import androidx.compose.ui.test.SemanticsNodeInteraction
-import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.assertIsFocused
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithContentDescription
-import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performTextReplacement
 import com.pokesearch.data.model.Pokemon
 import com.pokesearch.data.model.PokemonType
+import com.pokesearch.ui.screen.search.BaseComposeTest
 import com.pokesearch.ui.screen.search.DataUiState
 import com.pokesearch.ui.screen.search.SearchUiState
-import com.pokesearch.ui.screen.search.component.LOADING_INDICATOR
-import com.pokesearch.ui.screen.search.component.SearchScreenInternal
+import com.pokesearch.ui.screen.search.assertContentDescDisplayed
+import com.pokesearch.ui.screen.search.assertTagDisplayed
+import com.pokesearch.ui.screen.search.assertTextDisplayed
 import org.junit.Rule
 import org.junit.Test
 import org.mockito.kotlin.mock
 import org.mockito.kotlin.verify
 
-class SearchScreenInternalTest {
+class SearchScreenInternalTest: BaseComposeTest {
 
     @get:Rule
-    val composeTestRule = createComposeRule()
+    override val composeTestRule = createComposeRule()
 
     private val onQueryChange = mock<(String) -> Unit>()
 
@@ -121,18 +120,5 @@ class SearchScreenInternalTest {
                 onQueryChange = onQueryChange
             )
         }
-    }
-
-    private fun assertTextDisplayed(text: String): SemanticsNodeInteraction {
-        return composeTestRule.onNodeWithText(text).assertIsDisplayed()
-    }
-
-    private fun assertTagDisplayed(tag: String): SemanticsNodeInteraction {
-        return composeTestRule.onNodeWithTag(tag).assertIsDisplayed()
-    }
-
-    private fun assertContentDescDisplayed(contentDesc: String): SemanticsNodeInteraction {
-        return composeTestRule.onNodeWithContentDescription(contentDesc)
-            .assertIsDisplayed()
     }
 }
