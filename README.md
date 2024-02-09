@@ -4,9 +4,9 @@ When found, it displays some basic information about the Pokemon and its picture
 
 ## Screenshots
 
-| Empty                          | Result                          |
-|--------------------------------|---------------------------------|
-| ![](./documentation/empty.png) | ![](./documentation/result.png) |
+| Empty                          | Result with name                     | Result with number                     |
+|--------------------------------|--------------------------------------|----------------------------------------|
+| ![](./documentation/empty.png) | ![](./documentation/name_result.png) | ![](./documentation/number_result.png) |
 
 
 ## Architecture
