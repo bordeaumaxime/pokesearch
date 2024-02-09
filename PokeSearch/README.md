@@ -20,6 +20,12 @@ The UI has a single Activity and screen: `MainActivity` that sets the composable
 
 It uses MVVM architecture. `SearchScreen` uses the `SearchViewModel` and data to display is passed through `SearchUiState` using a `StateFlow`.
 
+The screen has 4 states:
+- Empty (before the user types anything)
+- Loading (when we are fetching data)
+- Data (when there is a successful result)
+- Error (when we could not retrieve data)
+
 ### Data
 
 The entry point to the data layer is the `PokemonRepository` that returns a `Pokemon` instance.
